@@ -1,0 +1,13 @@
+services:
+  app:
+    image: paulinewade/csce431:latest
+    platform: linux/amd64
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_USER=test_app
+      - DATABASE_PASSWORD=test_password
+    stdin_open: true
+    tty: true
